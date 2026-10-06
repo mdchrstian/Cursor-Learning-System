@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/md_log.py"
+      }
+    ],
+    "beforeSubmitPrompt": [
+      {
+        "command": ".cursor/hooks/md_log.py"
+      }
+    ],
+    "afterAgentResponse": [
+      {
+        "command": ".cursor/hooks/md_log.py"
+      }
+    ],
+    "postToolUse": [
+      {
+        "command": ".cursor/hooks/md_log.py",
+        "matcher": "AskQuestion"
+      }
+    ]
+  }
+}

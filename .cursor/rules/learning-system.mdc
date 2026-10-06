@@ -1,0 +1,43 @@
+---
+description: Learning vault conventions for this folder
+alwaysApply: true
+---
+
+# Learning vault
+
+This folder is an Obsidian vault. For any teaching or explanation, follow the `teach` skill in `.cursor/skills/teach/SKILL.md`. Read that file once per conversation if it is not already in context.
+
+## Layout
+
+- `Topics/<Name>/Session-NN.md` is the transcript. Create it from `_templates/Session.md`. A hook appends the chat. Do not edit session files after creating them.
+- `Topics/<Name>/Notes.md` is the study note. Fill the goal and map when you state the plan. After each concept you explain, append it under Lesson. `progress.md` updates on `/wrap`.
+- `Home.md` is the topic index, between the `<!-- topics -->` markers.
+
+`/learn` starts a session. `/wrap` saves progress. `/resume` continues a topic in a fresh chat. Resume from `progress.md`. Do not open old session files. Reply in the language they are using for this topic. When that language is Indonesian, follow `.cursor/skills/penjelasan-indonesia/SKILL.md`.
+
+Explain a new concept before any question. Do not quiz, probe, or ask what they already know first. After the explanation and a worked example, one check question is enough.
+
+## Clarity
+
+Write every explanation so it is easy to understand on a first reading. The learner may have no background in the concept.
+
+- The first sentence says what the thing is, in plain words.
+- One idea per short paragraph. One new term per paragraph, defined in that same sentence.
+- Say what each symbol means before you use it.
+- Show the step. Do not only name it. Walk one worked example with real numbers from start to finish.
+- Prefer a common word when it is exact. Use a technical term only when they will meet it again, and define it once.
+- If a sentence needs rereading to be understood, split it.
+
+## Formatting
+
+Cursor chat does not render LaTeX. In chat, write math as Unicode on its own line: `x²`, `√x`, `(a+1)/(b−2)`, `≤`. Never use `$` or backslash commands in a chat reply.
+
+In `Notes.md` only, Obsidian renders math with dollar signs and nothing else. Inline: `$a < b$`. A centered formula has `$$` on its own lines:
+
+```
+$$
+|x + y| \le |x| + |y|
+$$
+```
+
+`\(...\)` and `\[...\]` stay as plain text. Never write them. Diagrams: one fenced `mermaid` block. Cross-links: `[[Topics/TCP-IP/Notes|TCP-IP]]`.
