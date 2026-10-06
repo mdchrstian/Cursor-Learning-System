@@ -1,0 +1,10 @@
+# Your study vault stays on this computer.
+Topics/**
+!Topics/.gitkeep
+
+.obsidian/
+.learning/
+
+__pycache__/
+*.pyc
+.DS_Store
