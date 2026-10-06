@@ -8,7 +8,7 @@ This folder is an Obsidian vault. Open it in Obsidian and the session files rend
 - `/wrap` saves a short progress file. Do this about every 30–40 turns.
 - `/resume <topic>` in a **new chat** continues from that progress file.
 
-The transcript writes itself into the session file. The study note (`Notes.md`) gains the plan when teaching starts, and each concept just after it is explained. Open that note in Obsidian for rendered math. The chat shows the same math as plain text, because Cursor does not render LaTeX.
+The transcript writes itself into the session file. The study note (`Topics/<Topic>/<Topic>.md`) gains the plan when teaching starts, and each concept just after it is explained. Open that note in Obsidian for rendered math. The chat shows the same math as plain text, because Cursor does not render LaTeX.
 
 ## Spend fewer tokens
 

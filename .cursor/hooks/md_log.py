@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Mirror a learning chat into Topics/<Name>/Session-NN.md.
+"""Mirror a learning chat into Topics/<Name>/<Name>-Session-NN.md.
 
 Cursor runs this on stdin JSON. It never blocks the agent: every path exits 0.
 Unbound chats are ignored, except the latest prompt, which is flushed when a
@@ -16,7 +16,7 @@ import sys
 import traceback
 from pathlib import Path
 
-SESSION_RE = re.compile(r"(?:^|/)Topics/[^/]+/Session-\d+\.md$")
+SESSION_RE = re.compile(r"(?:^|/)Topics/[^/]+/[^/]+-Session-\d+\.md$")
 MAX_BLOCK = 8000
 
 

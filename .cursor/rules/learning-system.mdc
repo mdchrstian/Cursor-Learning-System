@@ -9,11 +9,21 @@ This folder is an Obsidian vault. For any teaching or explanation, follow the `t
 
 ## Layout
 
-- `Topics/<Name>/Session-NN.md` is the transcript. Create it from `_templates/Session.md`. A hook appends the chat. Do not edit session files after creating them.
-- `Topics/<Name>/Notes.md` is the study note. Fill the goal and map when you state the plan. After each concept you explain, append it under Lesson. `progress.md` updates on `/wrap`.
+- `Topics/<Name>/<Name>-Session-01.md` is the transcript. Create it from `.cursor/templates/Session.md`. A hook appends the chat. Do not edit session files after creating them.
+- `Topics/<Name>/<Name>.md` is the study note. Fill the goal and map when you state the plan. After each concept you explain, append it under Lesson. `<Name>-Progress.md` updates on `/wrap`.
 - `Home.md` is the topic index, between the `<!-- topics -->` markers.
 
-`/learn` starts a session. `/wrap` saves progress. `/resume` continues a topic in a fresh chat. Resume from `progress.md`. Do not open old session files. Reply in the language they are using for this topic. When that language is Indonesian, follow `.cursor/skills/penjelasan-indonesia/SKILL.md`.
+## Names
+
+The graph labels a note by its filename. Name every file with the topic so each node is unique. `<Name>` is the folder name, such as `Limit` or `TCP-IP`.
+
+- Study note: `Topics/Limit/Limit.md`
+- Session: `Topics/Limit/Limit-Session-01.md`
+- Progress: `Topics/Limit/Limit-Progress.md`
+
+Never use `Notes.md`, `Session-01.md`, or `progress.md`. The heading inside the file is the topic name too.
+
+`/learn` starts a session. `/wrap` saves progress. `/resume` continues a topic in a fresh chat. Resume from `<Name>-Progress.md`. Do not open old session files. Reply in the language they are using for this topic. When that language is Indonesian, follow `.cursor/skills/penjelasan-indonesia/SKILL.md`.
 
 Explain a new concept before any question. Do not quiz, probe, or ask what they already know first. After the explanation and a worked example, one check question is enough.
 
@@ -32,7 +42,7 @@ Write every explanation so it is easy to understand on a first reading. The lear
 
 Cursor chat does not render LaTeX. In chat, write math as Unicode on its own line: `x²`, `√x`, `(a+1)/(b−2)`, `≤`. Never use `$` or backslash commands in a chat reply.
 
-In `Notes.md` only, Obsidian renders math with dollar signs and nothing else. Inline: `$a < b$`. A centered formula has `$$` on its own lines:
+In the study note only, Obsidian renders math with dollar signs and nothing else. Inline: `$a < b$`. A centered formula has `$$` on its own lines:
 
 ```
 $$
@@ -40,4 +50,4 @@ $$
 $$
 ```
 
-`\(...\)` and `\[...\]` stay as plain text. Never write them. Diagrams: one fenced `mermaid` block. Cross-links: `[[Topics/TCP-IP/Notes|TCP-IP]]`.
+`\(...\)` and `\[...\]` stay as plain text. Never write them. Diagrams: one fenced `mermaid` block. Cross-links: `[[Topics/TCP-IP/TCP-IP|TCP-IP]]`.

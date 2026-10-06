@@ -67,9 +67,9 @@ Do not ask what to study before teaching. If the topic is broad, start from the 
 
 ## Save to Obsidian as you go
 
-The hook already appends the chat to `Session-NN.md`. You also update `Topics/<Name>/Notes.md` at these moments, in the same turn:
+The hook already appends the chat to `<Name>-Session-NN.md`. You also update `Topics/<Name>/<Name>.md` at these moments, in the same turn:
 
-1. When you state the plan: fill Goal, Unconditional truths, and Dependency map. Create the file from `_templates/Notes.md` if it is missing.
+1. When you state the plan: fill Goal, Unconditional truths, and Dependency map. Create the file from `.cursor/templates/Study-Note.md` if it is missing. The filename is the topic name, never `Notes.md`.
 2. After each concept you explain: append a `###` subsection under Lesson with the definition, why it matters, and the worked example, plus any formula. Do not rewrite the whole note.
 
 `/wrap` still refreshes progress and the home index. Do not wait for it to have notes in the vault.
@@ -85,7 +85,7 @@ Cursor chat does not render LaTeX. In every chat reply, write math as Unicode an
 
 Never put `$`, `$$`, or a backslash command in a chat reply.
 
-In `Notes.md` only, write those same formulas so Obsidian can render them. Inline is `$a < b$`. A centered formula has `$$` alone on the lines before and after it. `\(...\)` and `\[...\]` do not render in Obsidian. Never write them.
+In the study note only, write those same formulas so Obsidian can render them. Inline is `$a < b$`. A centered formula has `$$` alone on the lines before and after it. `\(...\)` and `\[...\]` do not render in Obsidian. Never write them.
 
 ## Pictures
 
@@ -93,4 +93,4 @@ One mermaid diagram when structure is clearer than a sentence. One idea, about s
 
 ## Token discipline
 
-Do not edit `Session-*.md` after creating it. Do not read old sessions. On resume, `progress.md` plus the goal, truths, and map at the top of `Notes.md` are enough. No subagents for research or drawing. One concept per reply, explained fully enough to follow on a first encounter.
+Do not edit `<Name>-Session-*.md` after creating it. Do not read old sessions. On resume, `<Name>-Progress.md` plus the goal, truths, and map at the top of `<Name>.md` are enough. No subagents for research or drawing. One concept per reply, explained fully enough to follow on a first encounter.

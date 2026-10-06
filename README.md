@@ -16,14 +16,14 @@ The tutor explains a new concept first, in plain language, with one worked examp
 2. Open the same folder as a vault in Obsidian.
 3. Start a new Cursor chat and run `/learn your topic`.
 
-Your notes appear in `Topics/<Topic>/`. Open `Notes.md` in Obsidian when you want rendered math. The chat shows the same math as plain text (`x²`, `≤`), because Cursor does not render LaTeX.
+Your notes appear in `Topics/<Topic>/`. Open `<Topic>.md` in Obsidian when you want rendered math. The filename is the topic name, so each note is its own node on the graph. The chat shows the same math as plain text (`x²`, `≤`), because Cursor does not render LaTeX.
 
 ## How a lesson goes
 
 - `/learn <topic>` starts a topic, or adds another session if that topic already exists.
 - The first reply explains. It says what the thing is, why it exists, how it works, and walks one example with real numbers.
 - One check question comes after that explanation.
-- Each concept is also appended to `Notes.md`, with formulas written as `$...$` or `$$` so Obsidian can render them.
+- Each concept is also appended to `<Topic>.md`, with formulas written as `$...$` or `$$` so Obsidian can render them.
 - `/wrap` saves a short progress file. Do this about every 30–40 turns.
 - `/resume <topic>` in a **new chat** continues from that progress file, without rereading old transcripts.
 
@@ -42,10 +42,11 @@ If you write in Indonesian, the explanation follows a direct style: the point fi
 | `.cursor/skills/penjelasan-indonesia/` | Style for Indonesian explanations |
 | `.cursor/commands/` | `/learn`, `/resume`, `/wrap` |
 | `.cursor/hooks/md_log.py` | Writes the chat into the session file |
-| `_templates/` | Empty session and note templates |
+| `.cursor/templates/` | Empty session and note templates |
+| `Topics/<Name>/<Name>.md` | The study note. The filename is the topic, so the graph stays readable |
 | `Topics/<Name>/` | Your private notes. Not part of the published repo |
 | `Home.md` | Topic index inside the Obsidian vault |
 
 ## If the session file stays empty
 
-Reload Cursor so it picks up the hook. Confirm `python3` runs in a terminal. The hook only starts logging after the tutor creates `Topics/<Name>/Session-01.md`.
+Reload Cursor so it picks up the hook. Confirm `python3` runs in a terminal. The hook only starts logging after the tutor creates `Topics/<Name>/<Name>-Session-01.md`.
